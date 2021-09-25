@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kfkIngRt8NEHSRMDob42XLTUXgFS2AOEQNRGVSVa7RYJhgJxVUrvOMpZUwEro2oBaKgNjoNbpUSt6ouSyWW/6Q==",
+  "dgSpecHash": "Ay/kmUx5AbHnrnRGxoccNxUgJjCCi4w2A1kriR/+c0lXHPeuRvsTuUEvrTyW0AOJejbXTo+3fl+rKNyZOx4tfw==",
   "success": true,
   "projectFilePath": "C:\\laragon\\www\\AppMascotas\\Mascotas.App\\Mascotas.App.Persistencia\\Mascotas.App.Persistencia.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\Familia\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.0\\microsoft.entityframeworkcore.design.5.0.0.nupkg.sha512",
     "C:\\Users\\Familia\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.0\\microsoft.entityframeworkcore.relational.5.0.0.nupkg.sha512",
     "C:\\Users\\Familia\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.0\\microsoft.entityframeworkcore.sqlserver.5.0.0.nupkg.sha512",
+    "C:\\Users\\Familia\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.0\\microsoft.entityframeworkcore.tools.5.0.0.nupkg.sha512",
     "C:\\Users\\Familia\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Familia\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\Familia\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
