@@ -17,4 +17,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Mascotas.App.Dominio\Mascotas.App.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>
