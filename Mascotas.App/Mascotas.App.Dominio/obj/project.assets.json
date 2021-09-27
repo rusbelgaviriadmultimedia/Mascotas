@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Familia\\.nuget\\packages\\": {}
+    "C:\\Users\\Rusbel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\laragon\\www\\AppMascotas\\Mascotas.App\\Mascotas.App.Dominio\\Mascotas.App.Dominio.csproj",
+      "projectUniqueName": "C:\\xampp\\htdocs\\Mascotas\\Mascotas.App\\Mascotas.App.Dominio\\Mascotas.App.Dominio.csproj",
       "projectName": "Mascotas.App.Dominio",
-      "projectPath": "C:\\laragon\\www\\AppMascotas\\Mascotas.App\\Mascotas.App.Dominio\\Mascotas.App.Dominio.csproj",
-      "packagesPath": "C:\\Users\\Familia\\.nuget\\packages\\",
-      "outputPath": "C:\\laragon\\www\\AppMascotas\\Mascotas.App\\Mascotas.App.Dominio\\obj\\",
+      "projectPath": "C:\\xampp\\htdocs\\Mascotas\\Mascotas.App\\Mascotas.App.Dominio\\Mascotas.App.Dominio.csproj",
+      "packagesPath": "C:\\Users\\Rusbel\\.nuget\\packages\\",
+      "outputPath": "C:\\xampp\\htdocs\\Mascotas\\Mascotas.App\\Mascotas.App.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Familia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Rusbel\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2zK2qcYQKyG3tmMY2fGBGGP34HmGnGdQfQDcdVY5d8hUo5Gt0EfGWC8/FfslZs/sAoBBatZY6Q3u0TSWW/HIuw==",
+  "dgSpecHash": "Bpm8nW92MAEUKTXWoGGYyaVQxpUha63vdeWkCO/3o0EWgzkoYSF67LwQrxBe1MSUFxiV/wYPkqZqb8sEGlqJAg==",
   "success": true,
-  "projectFilePath": "C:\\laragon\\www\\AppMascotas\\Mascotas.App\\Mascotas.App.Dominio\\Mascotas.App.Dominio.csproj",
+  "projectFilePath": "C:\\xampp\\htdocs\\Mascotas\\Mascotas.App\\Mascotas.App.Dominio\\Mascotas.App.Dominio.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
