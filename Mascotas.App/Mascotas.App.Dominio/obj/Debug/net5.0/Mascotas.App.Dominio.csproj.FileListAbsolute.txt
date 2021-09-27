@@ -1,0 +1,12 @@
+C:\xampp\htdocs\Mascotas\Mascotas.App\Mascotas.App.Dominio\bin\Debug\net5.0\Mascotas.App.Dominio.deps.json
+C:\xampp\htdocs\Mascotas\Mascotas.App\Mascotas.App.Dominio\bin\Debug\net5.0\Mascotas.App.Dominio.dll
+C:\xampp\htdocs\Mascotas\Mascotas.App\Mascotas.App.Dominio\bin\Debug\net5.0\ref\Mascotas.App.Dominio.dll
+C:\xampp\htdocs\Mascotas\Mascotas.App\Mascotas.App.Dominio\bin\Debug\net5.0\Mascotas.App.Dominio.pdb
+C:\xampp\htdocs\Mascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\Mascotas.App.Dominio.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Mascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\Mascotas.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\Mascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\Mascotas.App.Dominio.AssemblyInfoInputs.cache
+C:\xampp\htdocs\Mascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\Mascotas.App.Dominio.AssemblyInfo.cs
+C:\xampp\htdocs\Mascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\Mascotas.App.Dominio.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Mascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\Mascotas.App.Dominio.dll
+C:\xampp\htdocs\Mascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\ref\Mascotas.App.Dominio.dll
+C:\xampp\htdocs\Mascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\Mascotas.App.Dominio.pdb
