@@ -5,7 +5,7 @@
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Humanizer.dll": {}
+          "lib/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {}
@@ -1518,6 +1518,16 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Mascotas.App.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Mascotas.App.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mascotas.App.Dominio.dll": {}
         }
       }
     }
@@ -5787,10 +5797,16 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Mascotas.App.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../Mascotas.App.Dominio/Mascotas.App.Dominio.csproj",
+      "msbuildProject": "../Mascotas.App.Dominio/Mascotas.App.Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Mascotas.App.Dominio >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
@@ -5798,19 +5814,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Familia\\.nuget\\packages\\": {}
+    "C:\\Users\\Rusbel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\laragon\\www\\AppMascotas\\Mascotas.App\\Mascotas.App.Persistencia\\Mascotas.App.Persistencia.csproj",
+      "projectUniqueName": "C:\\xampp\\htdocs\\Mascotas\\Mascotas.App\\Mascotas.App.Persistencia\\Mascotas.App.Persistencia.csproj",
       "projectName": "Mascotas.App.Persistencia",
-      "projectPath": "C:\\laragon\\www\\AppMascotas\\Mascotas.App\\Mascotas.App.Persistencia\\Mascotas.App.Persistencia.csproj",
-      "packagesPath": "C:\\Users\\Familia\\.nuget\\packages\\",
-      "outputPath": "C:\\laragon\\www\\AppMascotas\\Mascotas.App\\Mascotas.App.Persistencia\\obj\\",
+      "projectPath": "C:\\xampp\\htdocs\\Mascotas\\Mascotas.App\\Mascotas.App.Persistencia\\Mascotas.App.Persistencia.csproj",
+      "packagesPath": "C:\\Users\\Rusbel\\.nuget\\packages\\",
+      "outputPath": "C:\\xampp\\htdocs\\Mascotas\\Mascotas.App\\Mascotas.App.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Familia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Rusbel\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -5821,7 +5837,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\xampp\\htdocs\\Mascotas\\Mascotas.App\\Mascotas.App.Dominio\\Mascotas.App.Dominio.csproj": {
+              "projectPath": "C:\\xampp\\htdocs\\Mascotas\\Mascotas.App\\Mascotas.App.Dominio\\Mascotas.App.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5870,7 +5890,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

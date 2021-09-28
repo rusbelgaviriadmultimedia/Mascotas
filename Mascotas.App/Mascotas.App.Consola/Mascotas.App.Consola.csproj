@@ -5,8 +5,8 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Mascotas.App.Dominio\Mascotas.App.Dominio.csproj" />
+<ItemGroup>
+    <ProjectReference Include="..\Mascotas.App.Persistencia\Mascotas.App.Persistencia.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
