@@ -1,13 +1,10 @@
 using System;
 
-namespace Mascotas.App.Dominio
+namespace Mascotas.App.Dominio.Entidades
 {
-    public class Clase_DuenoMascota
+    public class Clase_SolicitudDeVisita
     {
         public int IdSolicitudDeVisita { get;set; }
-        public Int IdDueñoMascota { get; set;}
-        public Mascota Mascota { get; set;}
-        public MedicoVeterinario Veterinario {get; set;}
-        public FechaEstimadaDeVisita FechaVisita{ get; set;}       
+        
     }
 }

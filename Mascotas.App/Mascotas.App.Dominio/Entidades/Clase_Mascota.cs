@@ -9,6 +9,6 @@ namespace Mascotas.App.Dominio
         public string ColorDeOjosMascota { get;set; }
         public float EstaturaMascota {get; set;}
         public string RazaMascota { get; set;} 
-        public string CategoriaMascota { get; set;}        
+        public string CategoriaMascota { get; set;}       
     }
 }
