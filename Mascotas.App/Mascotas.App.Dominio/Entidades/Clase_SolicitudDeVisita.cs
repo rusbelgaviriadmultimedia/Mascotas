@@ -1,5 +1,3 @@
-using System;
-
 namespace Mascotas.App.Dominio.Entidades
 {
     public class Clase_SolicitudDeVisita

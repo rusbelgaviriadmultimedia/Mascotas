@@ -1,6 +1,4 @@
-using System;
-
-namespace Mascotas.App.Dominio
+namespace Mascotas.App.Dominio.Entidades
 {
     public class Clase_TipoAnimal
     {
