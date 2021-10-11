@@ -7,9 +7,10 @@ namespace Mascotas.App.Dominio.Entidades
 {
     public class ClaseSolicitudDeVisita
     {
+        [ForeignKey(nameof(IdentificacionDuenoMascota))]
         public string IdentificacionDuenoMascota { get;set; }
         public ClaseListaMascota listaMascota { get;set; }
-        public ClaseTipoAnimal tipoAnimal { get;set; }
-        public ClaseListaMedicos listaMedicos { get;set; }
+        public ClaseTipoAnimal TipoAnimal { get;set; }
+        public ClaseListaMedicos ListaMedicos { get;set; }
     }
 }

@@ -7,10 +7,12 @@ namespace Mascotas.App.Dominio.Entidades
 {
     public class ClaseEstadoMascota
     {
-        public string temperatura { get;set; }
-        public string peso { get;set; }
-        public string frecuenciaRespiratoria { get;set; }
-        public string frecuenciaCardiaca { get;set; }
+        [ForeignKey(nameof(Id))]
+        public int Id {get; set;}
+        public string Temperatura { get;set; }
+        public string Peso { get;set; }
+        public string FrecuenciaRespiratoria { get;set; }
+        public string FrecuenciaCardiaca { get;set; }
         public string EstadoDeAnimo { get;set; }
     }
 }

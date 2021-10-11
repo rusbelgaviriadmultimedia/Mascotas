@@ -9,7 +9,9 @@ namespace Mascotas.App.Dominio.Entidades
 {
     public class ClaseListaMascota
     {
-        public int IdDueño { get;set; }
+        [ForeignKey(nameof(IdDueno))]
+        public int IdDueno { get;set; }
+        [ForeignKey(nameof(IdMascotas))]
         public int IdMascotas { get;set; }    
         /**public list<ClaseMascotas> listaMascota { get;set; } 
         public void almacenasMascotasDueno(id)

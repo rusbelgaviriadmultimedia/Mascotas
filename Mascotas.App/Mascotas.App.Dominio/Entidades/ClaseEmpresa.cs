@@ -7,9 +7,10 @@ namespace Mascotas.App.Dominio.Entidades
 {
     public class ClaseEmpresa
     {
+        [ForeignKey(nameof(Nit))]
         public string Nit { get; set;}
         public string RazonSocial {get;set;}        
         public string Direccion { get; set; }
-        public ClaseListaMedicos listaMedicos { get; set; }
+        ///public ClaseListaMedicos listaMedicos { get; set; }
     }
 }

@@ -7,9 +7,9 @@ namespace Mascotas.App.Dominio.Entidades
 {
     public class ClaseMedicoVeterinario:ClasePersona
     {
-        public int Id { get;set; }
+        [ForeignKey(nameof(TarjetaProfesional))]
         public string TarjetaProfesional { get; set; }
-        public ClaseTipoAnimal tipoAnimal { get; set; }
+        public ClaseTipoAnimal TipoAnimal { get; set; }
 
         /**public string selectTipoMascota(int)
         { switch (select)

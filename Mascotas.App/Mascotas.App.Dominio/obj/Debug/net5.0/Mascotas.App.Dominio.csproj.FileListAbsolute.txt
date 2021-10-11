@@ -1,0 +1,12 @@
+C:\laragon\www\AppMascotas\Mascotas.App\Mascotas.App.Dominio\bin\Debug\net5.0\Mascotas.App.Dominio.deps.json
+C:\laragon\www\AppMascotas\Mascotas.App\Mascotas.App.Dominio\bin\Debug\net5.0\Mascotas.App.Dominio.dll
+C:\laragon\www\AppMascotas\Mascotas.App\Mascotas.App.Dominio\bin\Debug\net5.0\ref\Mascotas.App.Dominio.dll
+C:\laragon\www\AppMascotas\Mascotas.App\Mascotas.App.Dominio\bin\Debug\net5.0\Mascotas.App.Dominio.pdb
+C:\laragon\www\AppMascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\Mascotas.App.Dominio.csproj.AssemblyReference.cache
+C:\laragon\www\AppMascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\Mascotas.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\laragon\www\AppMascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\Mascotas.App.Dominio.AssemblyInfoInputs.cache
+C:\laragon\www\AppMascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\Mascotas.App.Dominio.AssemblyInfo.cs
+C:\laragon\www\AppMascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\Mascotas.App.Dominio.csproj.CoreCompileInputs.cache
+C:\laragon\www\AppMascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\Mascotas.App.Dominio.dll
+C:\laragon\www\AppMascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\ref\Mascotas.App.Dominio.dll
+C:\laragon\www\AppMascotas\Mascotas.App\Mascotas.App.Dominio\obj\Debug\net5.0\Mascotas.App.Dominio.pdb
