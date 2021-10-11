@@ -9,10 +9,10 @@ using System.Collections.Generic;
 namespace Mascotas.App.Dominio.Entidades
 {
     public class ClaseListaMedicos
-    {   
-        [ForeignKey(nameof(IdMedicos))]
+    {   public int Id {get; set;}
+        ///[ForeignKey(Lecture)]
         public int IdMedicos { get; set; }
-        [ForeignKey(nameof(IdentificacionMedico))]
+        ///[ForeignKey(Lecture)]
         public string IdentificacionMedico { get; set; }
         /**public list<ClaseMedicoVeterinario> listaMedicoVeterinario{ get; set; }
         public void almacenasmedicos(id)

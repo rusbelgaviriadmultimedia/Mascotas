@@ -7,11 +7,12 @@ namespace Mascotas.App.Dominio.Entidades
 {
     public class ClaseVisitaVeterinaria
     {
-        [ForeignKey(nameof(Id))]
-        public int Id { get;set; }
+        ///[ForeignKey(nameof(Id))]
+        ///[Key]
+        public long Id { get;set; }
         public string FechaVisita { get; set;}
         public ClaseEstadoMascota EstadoMascota { get; set;}
-        [ForeignKey(nameof(IdVeterinario))]
+        ///[ForeignKey(Lecture)]
         public int IdVeterinario { get; set;}
         public string Recomendaciones { get; set;} 
         public string medicamentos { get;set; }    

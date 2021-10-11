@@ -6,7 +6,8 @@ namespace Mascotas.App.Dominio.Entidades
 {
     public class ClaseMascota
     {
-        public int Id { get;set; }
+        ///[Key]
+        public long Id { get;set; }
         public string Nombre { get; set;}
         public string ColorDeOjos { get;set; }
         public string ColorDePiel { get;set; }

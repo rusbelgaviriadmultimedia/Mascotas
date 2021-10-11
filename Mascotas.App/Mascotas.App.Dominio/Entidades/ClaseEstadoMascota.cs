@@ -7,8 +7,9 @@ namespace Mascotas.App.Dominio.Entidades
 {
     public class ClaseEstadoMascota
     {
-        [ForeignKey(nameof(Id))]
-        public int Id {get; set;}
+        ///[ForeignKey(nameof(Id))]
+        ///[Key]
+        public long Id {get; set;}
         public string Temperatura { get;set; }
         public string Peso { get;set; }
         public string FrecuenciaRespiratoria { get;set; }
