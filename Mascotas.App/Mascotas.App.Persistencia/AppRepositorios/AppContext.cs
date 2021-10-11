@@ -18,5 +18,13 @@ namespace Mascotas.App.Persistencia
         public DbSet<ClaseListaMascota> listaMascota {get;set;}
         public DbSet<ClaseListaMedicos> listaMedicos {get;set;}
         public DbSet<ClaseListaVisitas> ListaVisitas {get;set;}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                ///optionsBuilder.UseSqlServer("Data Source = FINA; Initial Catalog = HospiEnCasa;User Id=FINA\Familia; password=''")
+                optionsBuilder.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = Mascotas");
+            }
+        }
     }
 }
