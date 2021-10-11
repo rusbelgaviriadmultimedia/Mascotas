@@ -3,7 +3,7 @@ using Mascotas.App.Dominio.Entidades;
 
 namespace Mascotas.App.Persistencia
 {
-    public class AppContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
         public DbSet<ClasePersona> Persona {get;set;}
         public DbSet<ClaseMedicoVeterinario> MedicoVeterinario {get;set;}
@@ -23,7 +23,7 @@ namespace Mascotas.App.Persistencia
             if (!optionsBuilder.IsConfigured)
             {
                 ///optionsBuilder.UseSqlServer("Data Source = FINA; Initial Catalog = HospiEnCasa;User Id=FINA\Familia; password=''")
-                optionsBuilder.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = Mascotas");
+                optionsBuilder.UseSqlServer(@"Server = (localdb)\\mssqllocaldb; Database = Mascotas");
             }
         }
     }
