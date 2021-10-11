@@ -5,14 +5,18 @@ namespace Mascotas.App.Persistencia
 {
     public class AppContext : DbContext
     {
-        public DbSet<Clase_Persona> Persona {get;set;}
-        public DbSet<Clase_MedicoVeterinario> MedicoVeterinario {get;set;}
-        public DbSet<Clase_DuenoMascota> DuenoMascota {get;set;}
-        public DbSet<Clase_SolicitudDeVisita> SolicitudDeVisita {get;set;}
-        public DbSet<Clase_TipoAnimal> TipoAnimal {get;set;}
-        public DbSet<Clase_Mascota > Mascota {get;set;}
-        public DbSet<Clase_VisitaVeterinaria > VisitaVeterinaria {get;set;}
-        public DbSet<Clase_Empresa> Empresa {get;set;}
-        
+        public DbSet<ClasePersona> Persona {get;set;}
+        public DbSet<ClaseMedicoVeterinario> MedicoVeterinario {get;set;}
+        public DbSet<ClaseDatosDuenos> DuenoMascota {get;set;}
+        public DbSet<ClaseSolicitudDeVisita> SolicitudDeVisita {get;set;}
+        ///El tipo 'ClaseTipoAnimal' debe ser un tipo de referencia para poder usarlo como parámetro
+        /// ///public DbSet<ClaseTipoAnimal> TipoAnimal {get;set;}
+        public DbSet<ClaseMascota > Mascota {get;set;}
+        public DbSet<ClaseVisitaVeterinaria > VisitaVeterinaria {get;set;}
+        public DbSet<ClaseEmpresa> Empresa {get;set;}
+        public DbSet<ClaseEstadoMascota> estadoMascota {get;set;}
+        public DbSet<ClaseListaMascota> listaMascota {get;set;}
+        public DbSet<ClaseListaMedicos> listaMedicos {get;set;}
+        public DbSet<ClaseListaVisitas> ListaVisitas {get;set;}
     }
 }
