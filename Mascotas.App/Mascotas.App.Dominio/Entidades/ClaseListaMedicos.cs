@@ -9,11 +9,11 @@ using System.Collections.Generic;
 namespace Mascotas.App.Dominio.Entidades
 {
     public class ClaseListaMedicos
-    {   public int Id {get; set;}
+    {   ///public int Id {get; set;}
         ///[ForeignKey(Lecture)]
-        public int IdMedicos { get; set; }
+        public long IdMedicos { get; set; }
         ///[ForeignKey(Lecture)]
-        public string IdentificacionMedico { get; set; }
+        public long IdentificacionMedico { get; set; }
         /**public list<ClaseMedicoVeterinario> listaMedicoVeterinario{ get; set; }
         public void almacenasmedicos(id)
         {
@@ -21,5 +21,7 @@ namespace Mascotas.App.Dominio.Entidades
                 listaMedicoVeterinario.add(Nombre,tipoAnimal);
             }
         } */
+        //Constructor
+        public ClaseListaMedicos(){}
     }
 }

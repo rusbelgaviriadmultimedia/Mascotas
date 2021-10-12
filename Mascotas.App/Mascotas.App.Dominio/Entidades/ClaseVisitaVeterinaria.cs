@@ -16,5 +16,6 @@ namespace Mascotas.App.Dominio.Entidades
         public int IdVeterinario { get; set;}
         public string Recomendaciones { get; set;} 
         public string medicamentos { get;set; }    
+        public ClaseVisitaVeterinaria(){}
     }
 }

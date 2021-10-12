@@ -14,5 +14,7 @@ namespace Mascotas.App.Dominio.Entidades
         public ClaseListaMascota listaMascota { get;set; }
         public ClaseTipoAnimal TipoAnimal { get;set; }
         public ClaseListaMedicos ListaMedicos { get;set; }
+
+        public ClaseSolicitudDeVisita(){}
     }
 }

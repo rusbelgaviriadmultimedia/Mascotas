@@ -13,6 +13,8 @@ namespace Mascotas.App.Dominio.Entidades
         public string ColorDePiel { get;set; }
         public float Estatura{get; set;}
         public string Raza { get; set;} 
-        public ClaseTipoAnimal tipoAnimal { get; set;}       
+        public ClaseTipoAnimal tipoAnimal { get; set;} 
+
+        public ClaseMascota(){}  
     }
 }

@@ -15,5 +15,8 @@ namespace Mascotas.App.Dominio.Entidades
         public string FrecuenciaRespiratoria { get;set; }
         public string FrecuenciaCardiaca { get;set; }
         public string EstadoDeAnimo { get;set; }
+
+        //Constructor
+        public ClaseEstadoMascota(){}
     }
 }

@@ -10,7 +10,7 @@ namespace Mascotas.App.Dominio.Entidades
 {
     public class ClaseListaVisitas
     {
-        public int Id { get; set;}
+        public long Id { get; set;}
         ///[ForeignKey(nameof(IdVisitas))]
         ///[Key]
         public int IdVisitas { get;set; }
@@ -26,5 +26,7 @@ namespace Mascotas.App.Dominio.Entidades
                 listaVisita.add(temperatura,peso,frecuenciaRespiratoria,frecuenciaCardiaca,EstadoDeAnimo,fechaVisita,IdVeterinario, Recomendaciones);
             }
         } */
+        //Constructor
+        public ClaseListaVisitas(){}
     }
 }

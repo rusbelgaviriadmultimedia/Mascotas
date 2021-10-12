@@ -12,5 +12,8 @@ namespace Mascotas.App.Dominio.Entidades
         public long Id { get;set; }
         public string Direccion { get;set; }
         public ClaseListaMascota ListaMascotas { get;set; }
+
+        //Constructor
+        public ClaseDatosDuenos(){}
     }
 }

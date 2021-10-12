@@ -9,7 +9,7 @@ namespace Mascotas.App.Dominio.Entidades
 {
     public class ClaseListaMascota
     {
-        public int Id { get; set;}
+        public long Id { get; set;}
         ///[ForeignKey(nameof(IdDueno))]
         ///[Key]
         public int IdDueno { get;set; }
@@ -22,6 +22,8 @@ namespace Mascotas.App.Dominio.Entidades
             if id = idDueño{
                 listaMascota.add(id,Nombre);
             }
-        }*/     
+        }*/    
+        //Constructor
+        public ClaseListaMascota(){}
     }
 }

@@ -14,5 +14,8 @@ namespace Mascotas.App.Dominio.Entidades
         public string RazonSocial {get;set;}        
         public string Direccion { get; set; }
         ///public ClaseListaMedicos listaMedicos { get; set; }
+
+        //Constructor
+        public ClaseEmpresa(){}
     }
 }
