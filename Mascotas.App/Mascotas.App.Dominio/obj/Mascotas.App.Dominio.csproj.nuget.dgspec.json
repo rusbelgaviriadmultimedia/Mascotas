@@ -10,11 +10,11 @@
         "projectUniqueName": "C:\\laragon\\www\\AppMascotas\\Mascotas.App\\Mascotas.App.Dominio\\Mascotas.App.Dominio.csproj",
         "projectName": "Mascotas.App.Dominio",
         "projectPath": "C:\\laragon\\www\\AppMascotas\\Mascotas.App\\Mascotas.App.Dominio\\Mascotas.App.Dominio.csproj",
-        "packagesPath": "C:\\Users\\finab\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Familia\\.nuget\\packages\\",
         "outputPath": "C:\\laragon\\www\\AppMascotas\\Mascotas.App\\Mascotas.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\finab\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Familia\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
