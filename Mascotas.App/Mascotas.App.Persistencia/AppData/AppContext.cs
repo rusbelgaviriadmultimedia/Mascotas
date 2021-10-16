@@ -9,7 +9,7 @@ namespace Mascotas.App.Persistencia
     public class ApplicationDbContext : DbContext
     {
         public DbSet<ClaseMedicoVeterinario> MedicoVeterinario {get;set;}
-        public DbSet<ClaseDatosDuenos> DuenoMascota {get;set;}
+        public DbSet<ClaseDuenoMascota> DuenoMascota {get;set;}
         ///El tipo 'ClaseTipoAnimal' debe ser un tipo de referencia para poder usarlo como parámetro
         /// ///public DbSet<ClaseTipoAnimal> TipoAnimal {get;set;}
         public DbSet<ClaseMascota > Mascota {get;set;}
@@ -23,7 +23,7 @@ namespace Mascotas.App.Persistencia
             {
                 ///optionsBuilder.UseSqlServer("Data Source = FINA; Initial Catalog = HospiEnCasa;User Id=FINA\Familia; password=''")
                 //optionsBuilder.UseSqlServer(@"Server = (localdb)\\mssqllocaldb; Database = Mascotas");
-                optionsBuilder.UseSqlServer(" Data Source = FINA; Initial Catalog = Mascotas; User=Root;Password= ");
+                optionsBuilder.UseSqlServer(" Data Source = FINA; Initial Catalog = Mascotas");
             }
         }
     }
