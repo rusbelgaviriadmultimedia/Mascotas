@@ -9,9 +9,9 @@ namespace Mascotas.App.Persistencia.AppRepositorios
     public interface IRepositorioDuenoMascota
     {
         IEnumerable<ClaseDuenoMascota> GetAllDuenoMascota();
-        ClaseDuenoMascota AppClaseDuenoMascota(ClaseDuenoMascota DuenoMascota);
+        ClaseDuenoMascota AddClaseDuenoMascota(ClaseDuenoMascota DuenoMascota);
         ClaseDuenoMascota UpdateClaseDuenoMascota(ClaseDuenoMascota DuenoMascota);
-        void DeleteClaseDuenoMascota(int Id);
-        ClaseDuenoMascota GetClaseDDuenoMascota(int Id);
+        void DeleteClaseDuenoMascota(int IdDuenoMascota);
+        ClaseDuenoMascota GetClaseDuenoMascota(int Id);
     }
 }
