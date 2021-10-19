@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Mascotas.App.Dominio.Entidades;
+
 namespace Mascotas.App.Persistencia.AppRepositorios
 {
-    public class RepositorioDuenoMascota:IRepositorioDuenoMascota
+   /* public class RepositorioDuenoMascota:IRepositorioDuenoMascota
     {
         /// <summary>
         /// Referencia al contexto de ClaseDuenoMascota
@@ -27,9 +28,9 @@ namespace Mascotas.App.Persistencia.AppRepositorios
             _app.Context.SaveChanges();
             return DuenoMascotaAdicionado.Entity;
         }
-        ClaseDuenoMascota IRepositorioDuenoMascota.DeleteClaseDuenoMascota(int IdDuenoMascota)
+        ClaseDuenoMascota IRepositorioDuenoMascota.DeleteClaseDuenoMascota(long Id)                                             
         {
-            var DuenoMascotaEncontrado = _appContext.ClaseDuenoMascota.FirstOrDefault(p => p.Id==IdDuenoMascota);
+            var DuenoMascotaEncontrado = _appContext.ClaseDuenoMascota.FirstOrDefault(p => p.IdMascota==Id);
             if(DuenoMascotaEncontrado==null)
             return;
             _appContext.DuenoMascota.Remove(DuenoMascotaEncontrado);
@@ -41,7 +42,7 @@ namespace Mascotas.App.Persistencia.AppRepositorios
             return _appContext.DuenoMascota;
         }
         
-        ClaseDuenoMascota IRepositorioDuenoMascota.GetClaseDuenoMascota(int Id)
+        ClaseDuenoMascota IRepositorioDuenoMascota.GetClaseDuenoMascota(long Id)
         {
             return  _appContext.ClaseDuenoMascota.FirstOrDefault(p => p.Id==IdDuenoMascota);
             
@@ -60,5 +61,5 @@ namespace Mascotas.App.Persistencia.AppRepositorios
             }
 
         }
-    }
+    }*/
 }
