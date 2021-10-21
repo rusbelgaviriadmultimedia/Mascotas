@@ -6,10 +6,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mascotas.App.Dominio.Entidades
 {
+    [Table("EstadoMascotaDb")]
     public class ClaseEstadoMascota
     {
         ///[ForeignKey(nameof(Id))]
         [Key]
+        [Column("idEstadoMascota")]
         public long Id {get; set;}
          [Required]
         [Column("TemperaturaMascota")]

@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mascotas.App.Dominio.Entidades
 {
+    [Table("DuenoMascotaDb")]
     public class ClaseDuenoMascota:ClasePersona
     {
         
@@ -13,9 +14,9 @@ namespace Mascotas.App.Dominio.Entidades
         [Required]
         [Column("DirecionDueno")]
         [StringLength(30,MinimumLength=5)]
-        public string Direccion { get;set; }
+        public string direccion { get;set; }
         [ForeignKey("IdMascota")]
-        public ClaseMascota Mascotas { get; set;}
+        public ClaseMascota mascotas { get; set;}
 
         //Constructor
         public ClaseDuenoMascota(){}

@@ -16,17 +16,17 @@ namespace Mascotas.App.Dominio.Entidades
          
         [Column("Nit")]
         [Key]
-        public long Nit { get; set;}
+        public long nit { get; set;}
         [Required]
         [Column("RazonSocial")]
         [StringLength(50,MinimumLength=5)]
-        public string RazonSocial {get;set;} 
+        public string razonSocial {get;set;} 
         [Required]
         [Column("DirecionEmpresa")]
         [StringLength(30,MinimumLength=5)]      
-        public string Direccion { get; set; }
+        public string direccion { get; set; }
         [ForeignKey("TarjetaProfesional")]
-        public virtual ClaseMedicoVeterinario MedicoVeterinario { get; set; }
+        public virtual ClaseMedicoVeterinario medicoVeterinario { get; set; }
 
         //Constructor
         public ClaseEmpresa(){}

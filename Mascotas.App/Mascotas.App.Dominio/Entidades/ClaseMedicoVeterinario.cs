@@ -6,32 +6,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mascotas.App.Dominio.Entidades
 {
+    [Table("MedicoVeterinarioDb")]
     public class ClaseMedicoVeterinario:ClasePersona
     {
-        [ForeignKey(nameof(TarjetaProfesional))]
-        public long TarjetaProfesional { get; set; }
-        public ClaseTipoAnimal TipoAnimal { get; set; }
+        [ForeignKey(nameof(tarjetaProfesional))]
+        public long tarjetaProfesional { get; set; }
+        [ForeignKey("idMascota")]
+        public ClaseTipoAnimal tipoAnimal { get; set; }
 
-        /**public string selectTipoMascota(int)
-        { switch (select)
-        {
-            case "1":
-               string tipo = ClaseTipoAnimal.Gato;
-                break;
-            case "2":
-                string tipo = ClaseTipoAnimal.Pajaro;
-                break;
-            case "3":
-                string tipo = ClaseTipoAnimal.perro;
-                break;
-            default:
-               string tipo = string none;
-                break;
-        return tipo;
-        }
-        
-
-        }*/
         public ClaseMedicoVeterinario(){}
     }
 }

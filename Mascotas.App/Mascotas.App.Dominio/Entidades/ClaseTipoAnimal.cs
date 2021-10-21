@@ -8,9 +8,9 @@ namespace Mascotas.App.Dominio.Entidades
 {
     public enum ClaseTipoAnimal
     {
-        Gato,
-        Pajaro,
-        Perro,
+        gato,
+        pajaro,
+        perro,
 
     }
     
