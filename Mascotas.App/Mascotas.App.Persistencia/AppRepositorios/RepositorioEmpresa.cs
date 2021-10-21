@@ -12,7 +12,7 @@ namespace Mascotas.App.Persistencia.AppRepositorios
         /// Referencia al contexto del paciente
         /// </sumary>
         
-        private readonly AppContext appContext;
+        //private readonly ApplicationDbContext appContext;
         ///<sumary>
         /// Metodo constructor a utilizar
         /// Inyeccion de dependencias para indicar el contexto a utilizar
@@ -25,64 +25,79 @@ namespace Mascotas.App.Persistencia.AppRepositorios
         }*/
 
         //Implementando la funcionalidad al metodo de la interface
-        public ClaseEmpresa AddEmpresa(ClaseEmpresa Empresa)
+        public ClaseEmpresa AddClasEmpresa(ClaseEmpresa Empresa)
         {
             //Insert
-            using( AppContext _appContext =new AppContext{} ){ 
-                var EmpresaAdicionada= _appContext.Empresa.Add(Empresa);
+            using( AppData.ApplicationDbContext _appContext =new AppData.ApplicationDbContext{} ){ 
+                /*EmpresaAdicionada objEmpresa= -appContext.Empresas({
+                    Nit = 12345,
+                    RazonSocial = "Pepito",
+                    Direccion = "c343k23"
+
+                })
+                Persona._appContex.Add(Objpersona);
+                _appContext.SaveChanges();*/
+
+                var EmpresaAdicionada= _appContext.Empresas.Add(Empresa);
                 _appContext.SaveChanges();
                 return EmpresaAdicionada.Entity;
             }
         }
-        public void DeleteEmpresa(long IdEmpresa)
+        public void DeleteClaseEmpresa(int Id)
         {
-            var EmpresaAdicionada= _appContext.Empresa.FirstOrDefault(ev => ev.Id==IdEmpresa);
-            if (EmpresaAdicionada == null)
-            return ;
-            _appContext.Empresa.Remove(EmpresaAdicionada);
-            _appContext.SaveChanges();
+            using( AppData.ApplicationDbContext _appContext =new AppData.ApplicationDbContext{} ){ 
+                var EmpresaAdicionada= _appContext.Empresas.FirstOrDefault(ev => ev.Id==Id);
+                if (EmpresaAdicionada == null)
+                return ;
+                _appContext.Empresas.Remove(EmpresaAdicionada);
+                _appContext.SaveChanges();
+            }
         }
 
         //Consultar todas las Personas
         public IEnumerable<ClaseEmpresa> GetAllEmpresa()
         {
-            //return _appContext.Empresa;
-             using( AppContext _appContext =new AppContext{} )
+            using( AppData.ApplicationDbContext _appContext =new AppData.ApplicationDbContext{} )
              { 
-                var EmpresaAdicionada =(from em in _appContext.Empresa select em).Tolist;
-                return EmpresaAdicionada;
+                 //Error Tolistt no esta implementada.
+                //var EmpresaAdicionada =(from em in _appContext.Empresas select em).Tolist;
+                //return EmpresaAdicionada;
+                return _appContext.Empresas;
              }
         }
 
         //Consultar una persona segun su Id y retornar
-        public ClaseEmpresa GetEmpresa(int IdEmpresa)
+        public ClaseEmpresa GetClaseEmpresa(int Id)
         {
             //Estructura video:
            // return _appContext.Empresa.FirstOrDefault(ev => ev.Id==IdEmpresa);
-             using( AppContext _appContext =new AppContext{} )
+             using( AppData.ApplicationDbContext _appContext =new AppData.ApplicationDbContext{} )
              { 
-                var EmpresaAdicionada= _appContext.Empresa.FirstOrDefault(ev => ev.Id==Empresa.Id);
-                return EmpresaAdicionada.Entity;
+                //var EmpresaAdicionada= _appContext.Empresa.FirstOrDefault(ev => ev.Id==Empresa.Id);
+                var EmpresEncontrada=(from em in _appContext.Empresas).where (em=>em.Id=Empresa.Id);                
+                return EmpresaEncontrada.Entity;
              }
         }
 
+
+
         //Implementar lo de actualizar para la Empresas
-        public ClaseEmpresa UpdateEmpresa(ClaseEmpresa Empresa)
+        public ClaseEmpresa UpdateClasEmpresa(ClaseEmpresa Empresa)
         {
-            using( AppContext _appContext =new AppContext{} )
+            using( AppData.ApplicationDbContext _appContext =new AppData.ApplicationDbContext{} )
             {
-                //var EmpresaAdicionada= _appContext.Empresa.FirstOrDefault(ev => ev.Id==Empresa.Id);
+                //var EmpresaAdicionada= _appContext.Empresas.FirstOrDefault(ev => ev.Id==Empresa.Id);
                 //linq:Lenguaje estructurado
-                var EmpresaAdicionada=(from p in _appContext.Empresa).where (em=>em.Id=Empresa.Id);
+                var EmpresEncontrada=(from em in _appContext.Empresas).where (em=>em.Id=Empresa.Id);
                 //if (EmpresaEncontrada!= null)
                 if (!(EmpresaEncontrada == null))
                 {
-                    EmpresaAdicionada.Nit=Empresa.Nit;
-                    EmpresaAdicionada.RazonSocial=Empresa.RazonSocial;
-                    EmpresaAdicionada.Direccion=Empresa.Direccion;
+                    EmpresaEncontrada.Nit=Empresa.Nit;
+                    EmpresaEncontrada.RazonSocial=Empresa.RazonSocial;
+                    EmpresaEncontrada.Direccion=Empresa.Direccion;
                 }
                 _appContext.SaveChanges();
-                return EmpresaAdicionada;
+                return EmpresaEncontrada;
                 
             }
         }
