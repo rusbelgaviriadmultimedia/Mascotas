@@ -25,7 +25,7 @@ namespace Mascotas.App.Dominio.Entidades
         [Column("DirecionEmpresa")]
         [StringLength(30,MinimumLength=5)]      
         public string direccion { get; set; }
-        [ForeignKey("TarjetaProfesional")]
+        [ForeignKey("identificacion")]
         public virtual ClaseMedicoVeterinario medicoVeterinario { get; set; }
 
         //Constructor

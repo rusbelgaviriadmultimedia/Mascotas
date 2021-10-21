@@ -14,7 +14,7 @@ namespace Mascotas.App.Dominio.Entidades
         public long id { get; set;}
         [ForeignKey("IdMascota")]
         public ClaseMascota mascotas { get; set;}
-        [ForeignKey("TarjetaProfesional")]
+        [ForeignKey("identificacion")]
         public virtual ClaseMedicoVeterinario medicoVeterinario { get; set; }
         [ForeignKey("idMascota")]
         public ClaseTipoAnimal tipoAnimal { get; set; }

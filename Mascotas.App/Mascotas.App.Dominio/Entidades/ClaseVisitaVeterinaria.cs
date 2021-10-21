@@ -27,7 +27,11 @@ namespace Mascotas.App.Dominio.Entidades
         [Required]
         [Column("medicamentos")]
         [StringLength(100,MinimumLength=5)] 
-        public string medicamentos { get;set; }  
+        public string medicamentos { get;set; } 
+        [ForeignKey("IdSolicitudVisita")] 
+        public virtual ClaseSolicitudVisita solicitudVisita { get; set; }
+        [NotMapped]
+        public string Prueba { get; set;}
 
 
         public ClaseVisitaVeterinaria(){}

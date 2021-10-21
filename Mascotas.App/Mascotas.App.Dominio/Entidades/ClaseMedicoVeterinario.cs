@@ -9,7 +9,7 @@ namespace Mascotas.App.Dominio.Entidades
     [Table("MedicoVeterinarioDb")]
     public class ClaseMedicoVeterinario:ClasePersona
     {
-        [ForeignKey(nameof(tarjetaProfesional))]
+        
         public long tarjetaProfesional { get; set; }
         [ForeignKey("idMascota")]
         public ClaseTipoAnimal tipoAnimal { get; set; }
