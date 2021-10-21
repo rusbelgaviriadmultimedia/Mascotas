@@ -8,9 +8,13 @@ namespace Mascotas.App.Dominio.Entidades
 {
     public class ClaseDuenoMascota:ClasePersona
     {
-        ///[ForeignKey(nameof(Id))]
+        
         ///[Key]
+        [Required]
+        [Column("DirecionDueno")]
+        [StringLength(30,MinimumLength=5)]
         public string Direccion { get;set; }
+        [ForeignKey("IdMascota")]
         public ClaseMascota Mascotas { get; set;}
 
         //Constructor
