@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Mascotas.App.Dominio.Entidades;
+using Mascotas.App.Persistencia.AppRepositorios;
+
 
 namespace Mascotas.App.Persistencia.AppRepositorios
 {
@@ -28,7 +30,7 @@ namespace Mascotas.App.Persistencia.AppRepositorios
         public ClaseEmpresa AddClasEmpresa(ClaseEmpresa Empresa)
         {
             //Insert
-            using( AppData.ApplicationDbContext _appContext =new AppData.ApplicationDbContext{} ){ 
+            using( ApplicationDbContext _appContext =new ApplicationDbContext{} ){ 
                 /*EmpresaAdicionada objEmpresa= -appContext.Empresas({
                     Nit = 12345,
                     RazonSocial = "Pepito",
@@ -45,10 +47,11 @@ namespace Mascotas.App.Persistencia.AppRepositorios
         }
         public void DeleteClaseEmpresa(int Id)
         {
-            using( AppData.ApplicationDbContext _appContext =new AppData.ApplicationDbContext{} ){ 
-                var EmpresaAdicionada= _appContext.Empresas.FirstOrDefault(ev => ev.Id==Id);
+            using( ApplicationDbContext _appContext =new ApplicationDbContext{} ){ 
+                var EmpresaAdicionada=(from em in _appContext.Empresas where em.Id==Id select em);
+                //var EmpresaAdicionada= _appContext.Empresas.FirstOrDefault(ev => ev.Id==Id);
                 if (EmpresaAdicionada == null)
-                return ;
+                return;
                 _appContext.Empresas.Remove(EmpresaAdicionada);
                 _appContext.SaveChanges();
             }
@@ -57,11 +60,11 @@ namespace Mascotas.App.Persistencia.AppRepositorios
         //Consultar todas las Personas
         public IEnumerable<ClaseEmpresa> GetAllEmpresa()
         {
-            using( AppData.ApplicationDbContext _appContext =new AppData.ApplicationDbContext{} )
+            using( ApplicationDbContext _appContext =new ApplicationDbContext{} )
              { 
                  //Error Tolistt no esta implementada.
-                //var EmpresaAdicionada =(from em in _appContext.Empresas select em).Tolist;
-                //return EmpresaAdicionada;
+                //var ListaEmpresa =(from em in _appContext.Empresas select em).Tolist();
+                //return ListaEmpresa;
                 return _appContext.Empresas;
              }
         }
@@ -71,10 +74,11 @@ namespace Mascotas.App.Persistencia.AppRepositorios
         {
             //Estructura video:
            // return _appContext.Empresa.FirstOrDefault(ev => ev.Id==IdEmpresa);
-             using( AppData.ApplicationDbContext _appContext =new AppData.ApplicationDbContext{} )
+             using( ApplicationDbContext _appContext =new ApplicationDbContext{} )
              { 
                 //var EmpresaAdicionada= _appContext.Empresa.FirstOrDefault(ev => ev.Id==Empresa.Id);
-                var EmpresEncontrada=(from em in _appContext.Empresas).where (em=>em.Id=Empresa.Id);                
+                var EmpresaAdicionada=(from em in _appContext.Empresas where em.Id==Id select em);
+                //var EmpresEncontrada=(from em in _appContext.Empresas).where (em=>em.Id=Empresa.Id);                
                 return EmpresaEncontrada.Entity;
              }
         }
@@ -84,11 +88,12 @@ namespace Mascotas.App.Persistencia.AppRepositorios
         //Implementar lo de actualizar para la Empresas
         public ClaseEmpresa UpdateClasEmpresa(ClaseEmpresa Empresa)
         {
-            using( AppData.ApplicationDbContext _appContext =new AppData.ApplicationDbContext{} )
+            using( ApplicationDbContext _appContext =new ApplicationDbContext{} )
             {
                 //var EmpresaAdicionada= _appContext.Empresas.FirstOrDefault(ev => ev.Id==Empresa.Id);
                 //linq:Lenguaje estructurado
-                var EmpresEncontrada=(from em in _appContext.Empresas).where (em=>em.Id=Empresa.Id);
+                //var EmpresEncontrada=(from em in _appContext.Empresas).where (em=>em.Id=Empresa.Id);
+                var EmpresaAdicionada=(from em in _appContext.Empresas where em.Id==Id select em);
                 //if (EmpresaEncontrada!= null)
                 if (!(EmpresaEncontrada == null))
                 {
