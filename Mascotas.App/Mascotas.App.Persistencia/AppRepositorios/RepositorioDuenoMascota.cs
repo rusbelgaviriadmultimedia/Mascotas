@@ -6,60 +6,73 @@ using Mascotas.App.Dominio.Entidades;
 
 namespace Mascotas.App.Persistencia.AppRepositorios
 {
-   /* public class RepositorioDuenoMascota:IRepositorioDuenoMascota
+    public class RepositorioDuenoMascota : IRepositorioDuenoMascota
     {
         /// <summary>
         /// Referencia al contexto de ClaseDuenoMascota
         /// <summary>
         private readonly AppContext _appContext;
+
         /// <summary>
         /// Metodo constructor utiliza
         /// Inyección de dependencias para indicar el contexto a utilizar
         /// </summary>
         /// <param name="AppContext"></param>//
+        
+
         public RepositorioDuenoMascota(AppContext appContext)
         {
             _appContext = appContext;
         }
-       
-        ClaseDuenoMascota IRepositorioDuenoMascota.AddClaseDuenoMascota(ClaseDuenoMascota DuenoMascota)
+
+        public  ClaseDuenoMascota AddClaseDuenoMascota(ClaseDuenoMascota DuenoMascota)
         {
-            var  DuenoMascotaAdicionado = _appContext.ClaseDuenoMascota.Add(DuenoMascota);
+            var DuenoMascotaAdicionado =
+                _appContext.ClaseDuenoMascota.Add(DuenoMascota);
             _app.Context.SaveChanges();
             return DuenoMascotaAdicionado.Entity;
         }
-        ClaseDuenoMascota IRepositorioDuenoMascota.DeleteClaseDuenoMascota(long Id)                                             
+
+        public void DeleteClaseDuenoMascota(int identificacion)
         {
-            var DuenoMascotaEncontrado = _appContext.ClaseDuenoMascota.FirstOrDefault(p => p.IdMascota==Id);
-            if(DuenoMascotaEncontrado==null)
-            return;
-            _appContext.DuenoMascota.Remove(DuenoMascotaEncontrado);
+            var DuenoMascotaEncontrado =
+                _appContext
+                    .ClaseDuenoMascota
+                    .FirstOrDefault(ma => ma.identificacion == identificacion);
+            if (DuenoMascotaEncontrado == null) return;
+            _appContext.DuenosMascotas.Remove (DuenoMascotaEncontrado);
             _app.Context.SaveChanges();
+        }
 
-        }
-        IEnumerable<ClaseDuenoMascota> IRepositorioDuenoMascota.GetAllDuenoMascota()
+        public IEnumerable<ClaseDuenoMascota> GetAllDuenoMascota()
         {
-            return _appContext.DuenoMascota;
+            return _appContext.DuenosMascotas;
         }
-        
-        ClaseDuenoMascota IRepositorioDuenoMascota.GetClaseDuenoMascota(long Id)
+
+        public ClaseDuenoMascota GetClaseDuenoMascota(int identificacion)
         {
-            return  _appContext.ClaseDuenoMascota.FirstOrDefault(p => p.Id==IdDuenoMascota);
-            
+            return _appContext
+                .ClaseDuenoMascota
+                .FirstOrDefault(ma => ma.identificacion == identificacion);
         }
-        
-        ClaseDuenoMascota IRepositorioDuenoMascota.UpdateClaseDuenoMascota(ClaseDuenoMascota DuenoMascota)
+
+        public ClaseDuenoMascota UpdateClaseDuenoMascota(ClaseDuenoMascota DuenoMascota)
         {
-            var DuenoMascotaEncontrado = _appContext.ClaseDuenoMascota.FirstOrDefault(p => p.Id == IdDuenoMascota);
-            if(DuenoMascotaEncontrado != null)
+            var DuenoMascotaEncontrado =
+                _appContext
+                    .ClaseDuenoMascota
+                    .FirstOrDefault(p => p.identificacion == DuenoMascota.identificacion);
+            if (DuenoMascotaEncontrado != null)
             {
-                DuenoMascotaEncontrado.Nombre=DuenoMascota.Nombre;
-                DuenoMascotaEncontrado.Apellido=DuenoMascota.Apellido;
-                DuenoMascotaEncontrado.NumeroTelefono=DuenoMascota.NumeroTelefono;
-                DuenoMascotaEncontrado.Direccion=DuenoMascota.Direccion;
-                DuenoMascotaEncontrado.UpdateDuenoMasscota=DuenoMascota.UpdateDuenoMasscota;
+                DuenoMascotaEncontrado.nombre = DuenoMascota.Nombre;
+                DuenoMascotaEncontrado.apellido = DuenoMascota.Apellido;
+                DuenoMascotaEncontrado.numeroTelefono = DuenoMascota.NumeroTelefono;
+                DuenoMascotaEncontrado.direccion = DuenoMascota.Direccion;
+                DuenoMascotaEncontrado.mascotas = DuenoMascota.mascotas;
+                
             }
-
+            _appContext.SaveChanges();
+            return DuenoMascotaEncontrado;
         }
-    }*/
+    }
 }
