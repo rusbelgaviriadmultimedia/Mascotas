@@ -8,9 +8,8 @@ namespace Mascotas.App.Dominio.Entidades
 {
     public class ClaseMedicoVeterinario:ClasePersona
     {
-        ///[ForeignKey(nameof(TarjetaProfesional))]
-        ///[
-        public string TarjetaProfesional { get; set; }
+        [ForeignKey(nameof(TarjetaProfesional))]
+        public long TarjetaProfesional { get; set; }
         public ClaseTipoAnimal TipoAnimal { get; set; }
 
         /**public string selectTipoMascota(int)

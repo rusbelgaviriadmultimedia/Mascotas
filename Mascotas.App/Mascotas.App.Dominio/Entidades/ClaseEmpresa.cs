@@ -6,16 +6,27 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mascotas.App.Dominio.Entidades
 {
+    [Table("EmpresaDb")] 
     public class ClaseEmpresa
     {
         ///[ForeignKey(nameof(Nit))]
-        ///[Key]
+
         /// 
-        public int Id { get; set;}
-        public string Nit { get; set;}
-        public string RazonSocial {get;set;}        
+        //public int Id { get; set;}
+         
+        [Column("Nit")]
+        [Key]
+        public long Nit { get; set;}
+        [Required]
+        [Column("RazonSocial")]
+        [StringLength(50,MinimumLength=5)]
+        public string RazonSocial {get;set;} 
+        [Required]
+        [Column("DirecionEmpresa")]
+        [StringLength(30,MinimumLength=5)]      
         public string Direccion { get; set; }
-        ///public ClaseListaMedicos listaMedicos { get; set; }
+        [ForeignKey("TarjetaProfesional")]
+        public virtual ClaseMedicoVeterinario MedicoVeterinario { get; set; }
 
         //Constructor
         public ClaseEmpresa(){}
