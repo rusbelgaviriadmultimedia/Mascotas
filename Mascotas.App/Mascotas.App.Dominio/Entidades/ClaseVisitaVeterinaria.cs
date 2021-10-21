@@ -6,15 +6,27 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mascotas.App.Dominio.Entidades
 {
+    [Table("VisitaVeterinariaDb")]
     public class ClaseVisitaVeterinaria
     {
         ///[ForeignKey(nameof(Id))]
-        ///[Key]
-        public long Id { get;set; }
-        public string FechaVisita { get; set;}
-        public ClaseEstadoMascota EstadoMascota { get; set;}
-        public virtual int IdVeterinario { get; set;}
-        public string Recomendaciones { get; set;} 
+        [Key]
+        [Required]
+        [Column("idVisitaVeterinaria")]
+        public long id { get;set; }
+        [Required]
+        [Column("fechaVisita")]
+        [StringLength(10,MinimumLength=5)]
+        public string fechaVisita { get; set;}
+        [ForeignKey("IdEstadoMascota")]
+        public ClaseEstadoMascota estadoMascota { get; set;}
+        [Required]
+        [Column("recomendaciones")]
+        [StringLength(100,MinimumLength=5)]
+        public string recomendaciones { get; set;}
+        [Required]
+        [Column("medicamentos")]
+        [StringLength(100,MinimumLength=5)] 
         public string medicamentos { get;set; }  
 
 
